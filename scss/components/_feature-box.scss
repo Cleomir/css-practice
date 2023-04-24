@@ -23,8 +23,9 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-  }
 
-  &__text {
+    @include respond(tab-portrait) {
+      margin-bottom: 0;
+    }
   }
 }

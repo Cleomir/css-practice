@@ -8,11 +8,24 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include respond(tab-portrait) {
+    padding: 4rem;
+  }
+  @include respond(phone) {
+    flex-wrap: wrap;
+    margin: 0 5% 8rem 5%;
+    transform: skewX(0);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
     clip-path: circle(50%);
     transform: translateX(-3rem) skewX(12deg);
+
+    @include respond(phone) {
+      transform: translateX(0rem) skewX(0);
+    }
   }
 
   &__img {
@@ -27,6 +40,12 @@
     width: 80%;
     margin-left: 3rem;
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      margin-left: 1.5rem;
+      width: 100%;
+      transform: skewX(0);
+    }
   }
 
   &__caption {
@@ -55,5 +74,9 @@
 
   & > * {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 }

@@ -19,9 +19,17 @@
 }
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
+
+  @include respond(tab-portrait) {
+    margin-bottom: 3rem !important;
+  }
 }
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
+
+  @include respond(tab-portrait) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-width-40 {
@@ -33,14 +41,26 @@
 
 .u-padding-left-15 {
   padding-left: 15%;
+
+  @include respond(tab-portrait) {
+    padding-left: 0 5%;
+  }
 }
 
 .u-padding-x-15 {
   padding: 0 15%;
+
+  @include respond(tab-portrait) {
+    padding: 0 5%;
+  }
 }
 
 .u-padding-right-15 {
   padding-right: 15%;
+
+  @include respond(tab-portrait) {
+    padding-right: 5%;
+  }
 }
 
 .u-margin-right-1 {
@@ -61,4 +81,8 @@
 
 .u-container {
   margin: 0 15%;
+
+  @include respond(tab-portrait) {
+    margin: 0 5%;
+  }
 }
